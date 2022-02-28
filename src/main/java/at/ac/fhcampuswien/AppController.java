@@ -1,5 +1,7 @@
 package at.ac.fhcampuswien;
 
+import java.util.List;
+
 public class AppController {
     private List<Article> articles;
 
@@ -13,8 +15,7 @@ public class AppController {
     }
 
     public int getArticles(){
-        //int number = articles.toArray().length;
-        return number;
+
     }
 
     public List<Article> getTopHeadlinesAustria() {
@@ -25,7 +26,7 @@ public class AppController {
 
     }
 
-    protected static List<Article> filterList(String query, List<Article> articles){
+    private List<Article> filterList(String query, List<Article> articles){
 
     }
 
