@@ -1,7 +1,7 @@
 package at.ac.fhcampuswien;
 
 public class Menu {
-    private AppController = new AppController();
+    private AppController controller = new AppController();
     private String INVALD_INPUT_MESSAGE;
     private String EXIT_MESSAGE;
 
