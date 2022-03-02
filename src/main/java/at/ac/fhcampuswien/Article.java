@@ -1,10 +1,13 @@
 package at.ac.fhcampuswien;
 
-public class Article {
-    String author;
-    String title;
+import java.util.List;
 
-    public Article(String author,String title ){
+public class Article{
+
+    private String author;
+    private String title;
+
+    public Article (String author,String title ){
 
     }
 
