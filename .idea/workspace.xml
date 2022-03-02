@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="000b0e18-4266-4b2d-89f1-8e380e0dc19e" name="Changes" comment="dummy code from diagramm">
-      <change afterPath="$PROJECT_DIR$/src/test/java/at/ac/fhcampuswien/appcontroller/getArticleCountTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/at/ac/fhcampuswien/appcontroller/setArticlesTest.java" afterDir="false" />
+    <list default="true" id="000b0e18-4266-4b2d-89f1-8e380e0dc19e" name="Changes" comment="create package in testfolder acc lecture repo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/ac/fhcampuswien/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/ac/fhcampuswien/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AppControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/at/ac/fhcampuswien/appcontroller/AppControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Menu" />
+        <entry key="$PROJECT_DIR$" value="Article" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,12 +56,12 @@
       <option name="presentableId" value="Default" />
       <updated>1645973572692</updated>
     </task>
-    <task id="LOCAL-00001" summary="dummy code from diagramm">
-      <created>1646214202364</created>
+    <task id="LOCAL-00001" summary="create package in testfolder acc lecture repo">
+      <created>1646211888501</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1646214202364</updated>
+      <updated>1646211888501</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -94,7 +90,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dummy code from diagramm" />
-    <option name="LAST_COMMIT_MESSAGE" value="dummy code from diagramm" />
+    <MESSAGE value="create package in testfolder acc lecture repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="create package in testfolder acc lecture repo" />
   </component>
 </project>

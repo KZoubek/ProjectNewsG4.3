@@ -15,8 +15,8 @@ public class AppController {
     }
 
     public int getArticles(){
-        //int number = articles.toArray().length;
-        return number;
+    int number = articles.toArray().length;
+    return number;
     }
 
     public List<Article> getTopHeadlinesAustria() {
