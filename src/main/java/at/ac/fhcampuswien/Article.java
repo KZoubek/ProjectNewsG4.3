@@ -1,4 +1,7 @@
 package at.ac.fhcampuswien;
 
-public class Article {
+import java.util.List;
+
+public class Article{
+
 }
