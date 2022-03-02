@@ -16,9 +16,8 @@ public class Article {
         return title;
     }
 
-    /*public String toString(){
+    // Override done
+    public String toString(){
         return String;
-    }*/
-
-    //Testpush123
+    }
 }
