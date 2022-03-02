@@ -15,7 +15,8 @@ public class AppController {
     }
 
     public int getArticles(){
-
+    int number = articles.toArray().length;
+    return number;
     }
 
     public List<Article> getTopHeadlinesAustria() {
@@ -26,11 +27,11 @@ public class AppController {
 
     }
 
-    private List<Article> filterList(String query, List<Article> articles){
+    protected List<Article> filterList(String query, List<Article> articles){
 
     }
 
-    private static List<Article> generateMockList(){
+    private List<Article> generateMockList(){
 
     }
 
