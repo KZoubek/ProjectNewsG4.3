@@ -6,26 +6,33 @@ public class Menu {
     private String EXIT_MESSAGE;
 
     //test
-    public void start(){
-
-    }
-    private void handleInput(String input){
-
-    }
-    private void getArticleCount(AppController.controller){
-
-    }
-    private void getTopHeadlinesAustria(AppController.controller){
+    public void start() {
 
     }
 
-    private void getAllNewsBitcoin(AppController.controller){}
+    private void handleInput(String input) {
 
-    private static void printExitMessage(){}
+    }
 
-    private static void printInvalidInputMessage(){}
+    private void getArticleCount(AppController controller) {
 
-    private static void printMenu(){}
+    }
+
+    private void getTopHeadlinesAustria(AppController controller) {
+
+    }
+
+    private void getAllNewsBitcoin(AppController controller) {
+    }
+
+    private static void printExitMessage() {
+    }
+
+    private static void printInvalidInputMessage() {
+    }
+
+    private static void printMenu() {
+    }
 
 
 }

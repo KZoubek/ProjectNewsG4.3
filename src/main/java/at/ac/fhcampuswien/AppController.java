@@ -5,7 +5,7 @@ import java.util.List;
 public class AppController {
     private List<Article> articles;
 
-    public AppController(List<Article> articles) {
+    public AppController() {
         this.articles = articles;
         // hier SUPER klasse von Articles?
     }
@@ -14,9 +14,9 @@ public class AppController {
 
     }
 
-    public int getArticles(){
-    int number = articles.toArray().length;
-    return number;
+    public int getArticles() {
+        int number = articles.toArray().length;
+        return number;
     }
 
     public List<Article> getTopHeadlinesAustria() {
@@ -27,11 +27,11 @@ public class AppController {
 
     }
 
-    protected List<Article> filterList(String query, List<Article> articles){
+    protected List<Article> filterList(String query, List<Article> articles) {
 
     }
 
-    private List<Article> generateMockList(){
+    private List<Article> generateMockList() {
 
     }
 
