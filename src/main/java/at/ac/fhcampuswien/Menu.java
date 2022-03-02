@@ -1,11 +1,14 @@
 package at.ac.fhcampuswien;
 
 public class Menu {
-    //test
+    private AppController = new AppController();
+    private String INVALD_INPUT_MESSAGE;
+    private String EXIT_MESSAGE;
+
     public void start(){
 
     }
-    private void handleinput(String input){
+    private void handleInput(String input){
 
     }
     private void getArticleCount(AppController.controller){
