@@ -5,10 +5,10 @@ public class Menu {
     public void start(){
 
     }
-    private void handeinput(String input){
+    private void handleinput(String input){
 
     }
-    private void getArtcleCount(AppController.controller){
+    private void getArticleCount(AppController.controller){
 
     }
     private void getTopHeadlinesAustria(AppController.controller){
