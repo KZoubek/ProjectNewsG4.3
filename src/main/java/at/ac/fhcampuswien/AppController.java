@@ -15,7 +15,7 @@ public class AppController {
     }
 
     public int getArticles(){
-        int number = articles.toArray().length;
+        //int number = articles.toArray().length;
         return number;
     }
 
