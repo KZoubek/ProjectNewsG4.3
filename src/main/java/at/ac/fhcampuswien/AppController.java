@@ -27,11 +27,11 @@ public class AppController {
 
     }
 
-    protected List<Article> filterList(String query, List<Article> articles){
+    protected static List<Article> filterList(String query, List<Article> articles){
 
     }
 
-    private List<Article> generateMockList(){
+    private static List<Article> generateMockList(){
 
     }
 
