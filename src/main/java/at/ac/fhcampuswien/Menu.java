@@ -5,7 +5,6 @@ public class Menu {
     private String INVALID_INPUT_MESSAGE;
     private String EXIT_MESSAGE;
 
-    //test
     public void start() {
 
     }
@@ -33,6 +32,5 @@ public class Menu {
 
     private static void printMenu() {
     }
-
 
 }
