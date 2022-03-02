@@ -1,11 +1,11 @@
 package at.ac.fhcampuswien;
 
 public class Article {
-    //new branch empty
-    String author;
-    String title;
 
-    public Article(String author,String title ){
+    private String author;
+    private String title;
+
+    public Article (String author,String title ){
 
     }
 
@@ -17,9 +17,8 @@ public class Article {
         return title;
     }
 
-    /*public String toString(){
+    // Override done
+    public String toString(){
         return String;
-    }*/
-
-    //Testpush123
+    }
 }
