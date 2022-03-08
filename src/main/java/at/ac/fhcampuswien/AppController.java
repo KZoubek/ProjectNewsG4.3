@@ -39,6 +39,10 @@ public class AppController {
         articles.add(two);
         Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         articles.add(three);
+        //Julian 4-6
+        //vivi 7-9
+        //mody 10-12
+
     }
 
 }
