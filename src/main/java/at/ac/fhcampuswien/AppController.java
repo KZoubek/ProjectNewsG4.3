@@ -33,9 +33,9 @@ public class AppController {
     }
 
     private ArrayList<Article> generateMockList() {
-        Article one = new Article("Margarete Schramboeck", "SWIFT geht in AT auch mit Erlagschein");
+        Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
         articles.add(one);
-        Article two = new Article("Simon Neuch", "Angermanagement und Mandalas");
+        Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
         articles.add(two);
         Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         articles.add(three);
