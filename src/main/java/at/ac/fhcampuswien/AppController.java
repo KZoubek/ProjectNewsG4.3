@@ -4,20 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
-    private ArrayList<Article> articles;
+    private ArrayList<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
-        this.articles = articles;
-        // hier SUPER klasse von Articles?
     }
 
     public void setArticles(ArrayList<Article> articles) {
-
+        this.articles = articles;
     }
 
-    public int getArticles() {
-        int number = articles.toArray().length;
-        return number;
+    public int getArticleCount() {
+
     }
 
     public ArrayList<Article> getTopHeadlinesAustria() {
