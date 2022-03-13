@@ -40,6 +40,12 @@ public class AppController {
         Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         articles.add(three);
         //Julian 4-6
+        Article four= new Article("Dr.Acula", "Viertes Buch");
+        articles.add(three);
+        Article five= new Article("five", "Fünftes Buch");
+        articles.add(three);
+        Article six= new Article("six", "Sechstes Buch");
+        articles.add(three);
         //vivi 7-9
         //mody 10-12
 
