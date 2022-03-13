@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
-    private ArrayList<Article> articles = generateMockList(); // for us to test
+    private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
     }
 
-    public void setArticles(ArrayList<Article> articles) {
+    public void setArticles(List<Article> articles) {
         this.articles = articles;
     }
 
@@ -17,28 +17,30 @@ public class AppController {
 
     }
 
-    public ArrayList<Article> getTopHeadlinesAustria() {
+    public List<Article> getTopHeadlinesAustria() {
 
     }
 
-    public ArrayList<Article> getAllNewsBitcoin() {
+    public List<Article> getAllNewsBitcoin() {
 
     }
 
-    protected ArrayList<Article> filterList(String query, List<Article> articles) {
+    protected List<Article> filterList(String query, List<Article> articles) {
 
     }
 
-    private ArrayList<Article> generateMockList() {
+    private static List<Article> generateMockList() {
+        List<Article> mock = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
-        articles.add(one);
+        mock.add(one);
         Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
-        articles.add(two);
+        mock.add(two);
         Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
-        articles.add(three);
+        mock.add(three);
         //Julian 4-6
         //vivi 7-9
         //mody 10-12
+        return mock;
 
     }
 
