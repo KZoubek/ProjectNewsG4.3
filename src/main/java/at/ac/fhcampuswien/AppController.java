@@ -37,7 +37,12 @@ public class AppController {
         mock.add(two);
         Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         mock.add(three);
-        //Julian 4-6
+        Article four= new Article("Dr.Acula", "Viertes Buch");
+        mock.add(four);
+        Article five= new Article("five", "Fünftes Buch");
+        mock.add(five);
+        Article six= new Article("six", "Sechstes Buch");
+        mock.add(six);
         //vivi 7-9
         //mody 10-12
         return mock;
