@@ -17,19 +17,20 @@ public class Menu {
         if (input.equals("a")) {
             System.out.println("Austria");
             //System.out.println(getTopHeadlinesAustria());
-        }
-        else if (input.equals("b")) {
+        } else if (input.equals("b")) {
             System.out.println("Bitcoin");
             //System.out.println(getAllNewsBitcoin());
-        }
-        else if (input.equals("y")) {
+        } else if (input.equals("y")) {
             System.out.println("Count");
             //System.out.println(getArticleCount());
-        }
-        else if (input.equals("q")) {
+        } else if (input.equals("q")) {
             System.out.println(EXIT_MESSAGE);
+            // void nicht erlaubt??
+            //System.out.println(printExitMessage());
         } else {
             System.out.println(INVALID_INPUT_MESSAGE);
+            // void nicht erlaubt??
+            //System.out.println(printInvalidInputMessage());
         }
 
         /*switch (input) {
@@ -68,10 +69,14 @@ public class Menu {
     }
 
     private static void printExitMessage() {
-
+        //this.EXIT_MESSAGE = EXIT_MESSAGE;
+        //String EXIT_MESSAGE = "Bye Bye";
+        //System.out.println("Bye Bye");
     }
 
     private static void printInvalidInputMessage() {
+        //this.INVALID_INPUT_MESSAGE = INVALID_INPUT_MESSAGE;
+        //System.out.println("Please enter a, b, y, q");
 
     }
 

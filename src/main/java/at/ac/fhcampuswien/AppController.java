@@ -14,7 +14,7 @@ public class AppController {
     }
 
     public int getArticleCount() {
-        int count = articles.size();
+        int count=0;
         return count;
     }
 
@@ -36,13 +36,13 @@ public class AppController {
         mock.add(one);
         Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
         mock.add(two);
-        Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
+        Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         mock.add(three);
-        Article four= new Article("Dr.Acula", "Viertes Buch");
+        Article four = new Article("Dr.Acula", "Viertes Buch");
         mock.add(four);
-        Article five= new Article("five", "Fünftes Buch");
+        Article five = new Article("five", "Fünftes Buch");
         mock.add(five);
-        Article six= new Article("six", "Sechstes Buch");
+        Article six = new Article("six", "Sechstes Buch");
         mock.add(six);
         //vivi 7-9
         //mody 10-12
