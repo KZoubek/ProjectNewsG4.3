@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
 
 public class setArticlesTest {
 
@@ -36,8 +34,8 @@ public class setArticlesTest {
         //mody 10-12
         return mock;
 
-        // compare what we expect vs what we have actual
-        assertArrayEquals(mock, articletest.setArticles());
+        // compare what we expect vs what we have
+        //assertArrayEquals(ArrayList<Article> mock,articletest.setArticles());
 
     }
 }
