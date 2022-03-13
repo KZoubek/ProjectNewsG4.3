@@ -3,19 +3,20 @@ package at.ac.fhcampuswien.appcontroller;
 import at.ac.fhcampuswien.AppController;
 import at.ac.fhcampuswien.Article;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 
 public class setArticlesTest {
 
     @Test
-    public void setArticles1() {
+    public List<Article> setArticles1() {
         //create new object from Appcontroller to call a specific method
         AppController articletest = new AppController();
-        articletest.setArticles(List<Article>);
+        articletest.setArticles();
 
         //Dummy list to have an expected
         List<Article> mock = new ArrayList<>();
@@ -36,7 +37,7 @@ public class setArticlesTest {
         return mock;
 
         // compare what we expect vs what we have actual
-        assertArrayEquals(mock, articletest.setArticles(List<Article>));
+        assertArrayEquals(mock, articletest.setArticles());
 
     }
 }

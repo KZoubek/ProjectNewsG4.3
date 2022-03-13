@@ -1,17 +1,8 @@
 package at.ac.fhcampuswien.appcontroller;
 
-import at.ac.fhcampuswien.Article;
-import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-
 public class getArticleCountTest {
 
-    @Test
+    /*@Test
     public void getArticleCount() {
         List<Article> articles = new ArrayList<>();
         int size = articles.size();
@@ -28,5 +19,5 @@ public class getArticleCountTest {
         //Rectangle r1 = (Rectangle) co1.newInstance(2, 2, 4, 4);
 
         assertEquals(size;"Count not correct.");
-    }
+    }*/
     }

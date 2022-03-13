@@ -1,12 +1,8 @@
 package at.ac.fhcampuswien.appcontroller;
 
-import at.ac.fhcampuswien.App;
-import org.junit.jupiter.api.Test;
-
-
 // aus Maven Video wie man einen Test schreibt
 public class DummyTest {
-
+/*
     @Test
     public void functionNameTest(){ //sind fast immer void
         //Objekt erstellen
@@ -19,5 +15,5 @@ public class DummyTest {
         //oben folgende importieren: import static org.junit.jupiter.api.Assertions.*;
         assertEquals("Nachricht", actual);
 
-    }
+    }*/
 }

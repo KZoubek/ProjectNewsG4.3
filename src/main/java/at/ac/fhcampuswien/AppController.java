@@ -9,24 +9,25 @@ public class AppController {
     public AppController() {
     }
 
-    public void setArticles(List<Article> articles) {
+    public void setArticles() {
         this.articles = articles;
     }
 
     public int getArticleCount() {
-
+        int count = articles.size();
+        return count;
     }
 
     public List<Article> getTopHeadlinesAustria() {
-
+        return articles;
     }
 
     public List<Article> getAllNewsBitcoin() {
-
+        return articles;
     }
 
     protected List<Article> filterList(String query, List<Article> articles) {
-
+        return articles;
     }
 
     private static List<Article> generateMockList() {
