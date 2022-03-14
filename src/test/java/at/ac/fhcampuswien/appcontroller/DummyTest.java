@@ -2,7 +2,7 @@ package at.ac.fhcampuswien.appcontroller;
 
 import at.ac.fhcampuswien.App;
 import org.junit.jupiter.api.Test;
-
+import static org.junit.jupiter.api.Assertions.*;
 
 // aus Maven Video wie man einen Test schreibt
 public class DummyTest {

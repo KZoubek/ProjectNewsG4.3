@@ -4,44 +4,48 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
-    private ArrayList<Article> articles;
+    private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
+    }
+
+    public void setArticles(List<Article> articles) {
         this.articles = articles;
-        // hier SUPER klasse von Articles?
     }
 
-    public void setArticles(ArrayList<Article> articles) {
-
-    }
-
-    public int getArticles() {
-        int number = articles.toArray().length;
-        return number;
-    }
-
-    public ArrayList<Article> getTopHeadlinesAustria() {
+    public int getArticleCount() {
 
     }
 
-    public ArrayList<Article> getAllNewsBitcoin() {
+    public List<Article> getTopHeadlinesAustria() {
 
     }
 
-    protected ArrayList<Article> filterList(String query, List<Article> articles) {
+    public List<Article> getAllNewsBitcoin() {
 
     }
 
-    private ArrayList<Article> generateMockList() {
+    protected List<Article> filterList(String query, List<Article> articles) {
+
+    }
+
+    private static List<Article> generateMockList() {
+        List<Article> mock = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
-        articles.add(one);
+        mock.add(one);
         Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
-        articles.add(two);
+        mock.add(two);
         Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
-        articles.add(three);
-        //Julian 4-6
+        mock.add(three);
+        Article four= new Article("Dr.Acula", "Viertes Buch");
+        mock.add(four);
+        Article five= new Article("five", "Fünftes Buch");
+        mock.add(five);
+        Article six= new Article("six", "Sechstes Buch");
+        mock.add(six);
         //vivi 7-9
         //mody 10-12
+        return mock;
 
     }
 
