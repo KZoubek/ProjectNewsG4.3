@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien.appcontroller;
+package at.ac.fhcampuswien;
 
 public class getTopHeadlineAustriaTest {
     //test

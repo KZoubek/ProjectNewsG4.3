@@ -1,12 +1,13 @@
 package at.ac.fhcampuswien;
 
-public class Article{
+public class Article {
 
     private String author;
     private String title;
 
-    public Article (String author,String title ){
-
+    public Article(String author, String title) {
+        this.author = author;
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -17,8 +18,8 @@ public class Article{
         return title;
     }
 
-    // Override done
-    public String toString(){
+    @Override
+    public String toString() {
         return "Author: " + getAuthor() + ", " + "Title: " + getTitle();
     }
 }

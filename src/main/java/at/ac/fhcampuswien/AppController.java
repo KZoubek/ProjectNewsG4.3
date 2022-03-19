@@ -7,10 +7,13 @@ public class AppController {
     private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
+        this.articles = articles;
+        //articles = new ArrayList<Article>();
+        //articles = generateMockList();
     }
 
-    public void setArticles() {
-        this.articles = articles;
+    public void setArticles(List<Article> articles) {
+       this.articles = articles;
     }
 
     public int getArticleCount() {
@@ -26,7 +29,8 @@ public class AppController {
         return articles;
     }
 
-    protected List<Article> filterList(String query, List<Article> articles) {
+    protected static List<Article> filterList(String query, List<Article> articles) {
+        List<Article> filteredList =new ArrayList<Article>();
         return articles;
     }
 
@@ -57,7 +61,5 @@ public class AppController {
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock1.add(twelve);
         return mock1;
-
     }
-
 }

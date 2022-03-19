@@ -1,7 +1,8 @@
-package at.ac.fhcampuswien.appcontroller;
+package at.ac.fhcampuswien;
 
-import at.ac.fhcampuswien.AppController;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class getArticleCountTest {
 
