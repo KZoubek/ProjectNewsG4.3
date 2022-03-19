@@ -4,15 +4,20 @@ import java.util.Scanner;
 
 public class Menu {
     private AppController controller = new AppController();
-    private static String INVALID_INPUT_MESSAGE = "Please enter a, b, y, q";
+    private static String INVALID_INPUT_MESSAGE = "Please enter a, b, y or q";
     private static String EXIT_MESSAGE = "Bye Bye";
 
-    //in Angabe fehlt static aber sonst kann die Main es nicht ausführen?
-    public static void start() {
+    public void start() {
+        Scanner userinput = new Scanner(System.in);
+
         printMenu();
 
-        Scanner userinput = new Scanner(System.in);
         String input = userinput.next();
+        handleInput(input);
+
+    }
+
+    private void handleInput(String input) {
 
         if (input.equals("a")) {
             System.out.println("Austria");
@@ -24,37 +29,10 @@ public class Menu {
             System.out.println("Count");
             //System.out.println(getArticleCount());
         } else if (input.equals("q")) {
-            System.out.println(EXIT_MESSAGE);
-            // void nicht erlaubt??
-            //System.out.println(printExitMessage());
+            printExitMessage();
         } else {
-            System.out.println(INVALID_INPUT_MESSAGE);
-            // void nicht erlaubt??
-            //System.out.println(printInvalidInputMessage());
+            printInvalidInputMessage();
         }
-
-        /*switch (input) {
-            case "a":
-                System.out.println("Austria");
-                break;
-            case "b":
-                System.out.println("Bitcoin");
-                break;
-            case "y":
-                System.out.println("Count");
-                break;
-            case "q":
-                System.out.println(EXIT_MESSAGE);
-                break;
-            default:
-                System.out.println(INVALID_INPUT_MESSAGE);
-        }*/
-        //
-
-    }
-
-    private void handleInput(String input) {
-
     }
 
     private void getArticleCount(AppController controller) {
@@ -69,14 +47,12 @@ public class Menu {
     }
 
     private static void printExitMessage() {
-        //this.EXIT_MESSAGE = EXIT_MESSAGE;
-        //String EXIT_MESSAGE = "Bye Bye";
-        //System.out.println("Bye Bye");
+        System.out.println(EXIT_MESSAGE);
+
     }
 
     private static void printInvalidInputMessage() {
-        //this.INVALID_INPUT_MESSAGE = INVALID_INPUT_MESSAGE;
-        //System.out.println("Please enter a, b, y, q");
+        System.out.println(INVALID_INPUT_MESSAGE);
 
     }
 
