@@ -1,23 +1,19 @@
 package at.ac.fhcampuswien.appcontroller;
 
+import at.ac.fhcampuswien.AppController;
+import org.junit.jupiter.api.Test;
+
 public class getArticleCountTest {
 
-    /*@Test
-    public void getArticleCount() {
-        List<Article> articles = new ArrayList<>();
-        int size = articles.size();
-        //Class<?> c = Class.forName("at.ac.fhcampuswien.AppController");
+    @Test
+    public void getArticleCountTest() {
 
-        //keine Parameter
-        //Method m = c.getMethod("getArticleCount");
-        // hier speichern wir in den seize die "Eingabe" und rufen die Funktion auf
-        size.actual = articles.getArticleCount();
+        AppController count = new AppController();
 
-        //Constructor<?> co1 = c.getConstructor(int.class, int.class, int.class, int.class);
+        int expected = 12;
+        int actual = count.getArticleCount();
 
-        articles = List<Article>;;
-        //Rectangle r1 = (Rectangle) co1.newInstance(2, 2, 4, 4);
-
-        assertEquals(size;"Count not correct.");
-    }*/
+        assertEquals(expected, actual);
     }
+    }
+

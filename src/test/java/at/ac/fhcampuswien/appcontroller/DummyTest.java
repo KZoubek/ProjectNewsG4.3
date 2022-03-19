@@ -3,7 +3,7 @@ package at.ac.fhcampuswien.appcontroller;
 // aus Maven Video wie man einen Test schreibt
 public class DummyTest {
 /*
-    @Test
+   /* @Test
     public void functionNameTest(){ //sind fast immer void
         //Objekt erstellen
         App myApp = new App();
