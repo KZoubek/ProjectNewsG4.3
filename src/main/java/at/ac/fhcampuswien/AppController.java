@@ -43,7 +43,12 @@ public class AppController {
         mock.add(five);
         Article six= new Article("six", "Sechstes Buch");
         mock.add(six);
-        //vivi 7-9
+        Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
+        mock.add(seven);
+        Article eight = new Article("Sage Smith", "Austria: Das A steht für Alpen");
+        mock.add(eight);
+        Article nine = new Article("Raze Rammayer", "Krise: Schokoladen-Verbot in der EU");
+        mock.add(nine);
         //mody 10-12
         Article ten = new Article("New York Times", "Eric Adams, a Bitcoinin Booster, Is Talking First Paycheck InCrypto");
         mock.add(ten);
