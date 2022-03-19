@@ -5,8 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 // aus Maven Video wie man einen Test schreibt
-public class DummyTest {
 
+public class DummyTest {
+/*
     @Test
     public void functionNameTest(){ //sind fast immer void
         //Objekt erstellen
@@ -20,4 +21,7 @@ public class DummyTest {
         assertEquals("Nachricht", actual);
 
     }
+
+ */
+
 }
