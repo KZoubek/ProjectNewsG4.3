@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien.appcontroller;
+package at.ac.fhcampuswien;
 
 import at.ac.fhcampuswien.App;
 import org.junit.jupiter.api.Test;
