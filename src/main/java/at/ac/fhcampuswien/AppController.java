@@ -31,6 +31,8 @@ public class AppController {
 
     protected static List<Article> filterList(String query, List<Article> articles) {
         List<Article> filteredList =new ArrayList<Article>();
+        // List
+        // for
         return articles;
     }
 
