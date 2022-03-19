@@ -4,30 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
-    private List<Article> articles = generateMockList();
+    private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
     }
 
-    public void setArticles(List<Article> articles) {
+    public void setArticles() {
         this.articles = articles;
     }
 
-    /*public int getArticleCount() {
-        return articles.size();
+    public int getArticleCount() {
+        int count=0;
+        return count;
     }
 
     public List<Article> getTopHeadlinesAustria() {
-
+        return articles;
     }
 
     public List<Article> getAllNewsBitcoin() {
-
+        return articles;
     }
 
     protected List<Article> filterList(String query, List<Article> articles) {
-
-    }*/
+        return articles;
+    }
 
     private static List<Article> generateMockList() {
         List<Article> mock = new ArrayList<>();
@@ -35,7 +36,7 @@ public class AppController {
         mock.add(one);
         Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
         mock.add(two);
-        Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
+        Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         mock.add(three);
         Article four= new Article("Dr.Acula", "Viertes Buch");
         mock.add(four);

@@ -1,7 +1,9 @@
 package at.ac.fhcampuswien;
 
-public class App {
-    public static void main(String[] args) {
+import java.io.IOException;
 
+public class App {
+    public static void main(String[] args) throws IOException {
+        Menu.start();
     }
 }
