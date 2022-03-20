@@ -2,20 +2,17 @@ package at.ac.fhcampuswien;
 
 import org.junit.jupiter.api.Test;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class setArticlesTest {
-    private List<Article> articles;
 
     @Test
-    public List<Article> setArticles1() {
-        //create new object from Appcontroller to call a specific method
-        AppController articletest = new AppController();
-
-        List<Article> articleArray = new ArrayList<>();
-        articleArray.contains(articletest);
+    public void setArticles1() {
 
         //Dummy list to have an expected
         List<Article> mock2 = new ArrayList<>();
@@ -43,10 +40,17 @@ public class setArticlesTest {
         mock2.add(eleven);
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock2.add(twelve);
-        return mock2;
+
+        //create new object from Appcontroller to call a specific method because it's not static
+        AppController articletest = new AppController();
+        articletest.getArticles();
+        List<Article> expected = new ArrayList<>();
+
+        //create a new List where we can store the values
+        List<Article> setListT = new ArrayList<>();
+        setListT.addAll(mock2);
 
         // compare what we expect vs what we have
-        //assert(ArrayList<Article> mock2, articletest.setArticles());
-
+        assertEquals(expected, setListT);
     }
 }
