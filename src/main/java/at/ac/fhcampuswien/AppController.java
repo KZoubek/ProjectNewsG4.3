@@ -7,11 +7,10 @@ public class AppController {
     private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
-        this.articles = articles;
     }
 
     public void setArticles(List<Article> articles) {
-       this.articles = articles;
+        this.articles = articles;
     }
 
     public int getArticleCount() {
