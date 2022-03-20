@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class setArticlesTest {
 
     @Test
-    public void setArticles1() {
+    public void setArticles1(){
 
         //Dummy list to have an expected
         List<Article> mock2 = new ArrayList<>();
@@ -43,14 +43,35 @@ public class setArticlesTest {
 
         //create new object from Appcontroller to call a specific method because it's not static
         AppController articletest = new AppController();
-        articletest.getArticles();
-        List<Article> expected = new ArrayList<>();
+        articletest.setArticles(mock2);
 
-        //create a new List where we can store the values
-        List<Article> setListT = new ArrayList<>();
-        setListT.addAll(mock2);
+        // check if articles have been set in new List
+        List<Article> gettedList = articletest.getArticles();
 
-        // compare what we expect vs what we have
-        assertEquals(expected, setListT);
+        // compare if both match
+        assertEquals(gettedList, mock2);
+    }
+
+    @Test
+    public void setArticles2() {
+
+        //Dummy list to have an expected
+        List<Article> mock2 = new ArrayList<>();
+        Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
+        mock2.add(one);
+        Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
+        mock2.add(two);
+        Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
+        mock2.add(three);
+
+        //create new object from Appcontroller to call a specific method because it's not static
+        AppController articletest2 = new AppController();
+        articletest2.setArticles(mock2);
+
+        // check if articles have been set in new List
+        List<Article> gettedList2 = articletest2.getArticles();
+
+        // compare if both match
+        assertEquals(gettedList2, mock2);
     }
 }
