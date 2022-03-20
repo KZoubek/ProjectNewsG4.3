@@ -8,8 +8,6 @@ public class AppController {
 
     public AppController() {
         this.articles = articles;
-        //articles = new ArrayList<Article>();
-        //articles = generateMockList();
     }
 
     public void setArticles(List<Article> articles) {
@@ -21,6 +19,11 @@ public class AppController {
         return count;
     }
 
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+
     public List<Article> getTopHeadlinesAustria() {
         return articles;
     }
@@ -30,10 +33,17 @@ public class AppController {
     }
 
     protected static List<Article> filterList(String query, List<Article> articles) {
-        List<Article> filteredList =new ArrayList<Article>();
-        // List
-        // for
-        return articles;
+        // Test 4 fails as "the" is included in "Mother" too
+        List<Article> queryList = new ArrayList<>();
+
+        for (int i = 0; i < articles.size(); i++) {
+            if (articles.get(i).getTitle().toLowerCase().contains(query.toLowerCase())) {
+                queryList.add(articles.get(i));
+            }
+            // String[] splitTitle = articleTitle.split(" ");?? splittet den Titel nach Wörtern auf
+            //muss aber in ein neues Array dann
+        }
+        return  queryList;
     }
 
     private static List<Article> generateMockList() {
@@ -62,6 +72,8 @@ public class AppController {
         mock1.add(eleven);
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock1.add(twelve);
+        Article thirteen = new Article("Lola Free", "Why the is not the same as you might think");
+        mock1.add(thirteen);
         return mock1;
     }
 }
