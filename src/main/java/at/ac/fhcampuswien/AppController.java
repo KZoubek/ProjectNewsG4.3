@@ -7,6 +7,7 @@ public class AppController {
     private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
+        this.articles = articles;
     }
 
     public void setArticles() {
@@ -26,8 +27,17 @@ public class AppController {
         return articles;
     }
 
-    protected List<Article> filterList(String query, List<Article> articles) {
-        return articles;
+    protected static List<Article> filterList(String query, List<Article> articles) {
+        List<Article> queryList = new ArrayList<>();
+
+        for (int i = 0; i < articles.size(); i++) {
+            if (articles.get(i).getTitle().toLowerCase().contains(query.toLowerCase())) {
+                queryList.add(articles.get(i));
+            }
+            // String[] splitTitle = articleTitle.split(" ");?? splittet den Titel nach Wörtern auf
+            //muss aber in ein neues Array dann
+        }
+        return queryList;
     }
 
     private static List<Article> generateMockList() {
@@ -38,11 +48,11 @@ public class AppController {
         mock.add(two);
         Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         mock.add(three);
-        Article four= new Article("Dr.Acula", "Viertes Buch");
+        Article four= new Article("Dr.Acula", "Austria is too small for me");
         mock.add(four);
-        Article five= new Article("five", "Fünftes Buch");
+        Article five= new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
         mock.add(five);
-        Article six= new Article("six", "Sechstes Buch");
+        Article six= new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
         mock.add(six);
         Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
         mock.add(seven);
@@ -57,7 +67,5 @@ public class AppController {
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock.add(twelve);
         return mock;
-
     }
-
 }
