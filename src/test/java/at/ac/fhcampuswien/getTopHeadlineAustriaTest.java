@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien.appcontroller;
+package at.ac.fhcampuswien;
 
 import at.ac.fhcampuswien.AppController;
 import at.ac.fhcampuswien.Article;
