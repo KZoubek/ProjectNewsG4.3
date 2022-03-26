@@ -3,12 +3,11 @@ package at.ac.fhcampuswien.appcontroller;
 import at.ac.fhcampuswien.AppController;
 import at.ac.fhcampuswien.Article;
 import org.junit.jupiter.api.Test;
-//von zoe bekommen
-import static org.junit.jupiter.api.Assertions.*;
-
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class getTopHeadlineAustriaTest {
     //test
@@ -31,7 +30,7 @@ public class getTopHeadlineAustriaTest {
 
         AppController CTRL = new AppController();
         List actual = CTRL.getTopHeadlinesAustria();
-        assertArrayEquals(articles,actual);
+        assertEquals(articles,actual);
 
 
     }

@@ -14,19 +14,19 @@ public class AppController {
     }
 
     public int getArticleCount() {
-
+    return 0;
     }
 
     public List<Article> getTopHeadlinesAustria() {
-
+        return articles;
     }
 
     public List<Article> getAllNewsBitcoin() {
-
+        return articles;
     }
 
     protected List<Article> filterList(String query, List<Article> articles) {
-
+        return articles;
     }
 
     private static List<Article> generateMockList() {
@@ -43,12 +43,7 @@ public class AppController {
         mock.add(five);
         Article six= new Article("six", "Sechstes Buch");
         mock.add(six);
-        Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
-        mock.add(seven);
-        Article eight = new Article("Sage Smith", "Austria: Das A steht für Alpen");
-        mock.add(eight);
-        Article nine = new Article("Raze Rammayer", "Krise: Schokoladen-Verbot in der EU");
-        mock.add(nine);
+        //vivi 7-9
         //mody 10-12
         return mock;
 
