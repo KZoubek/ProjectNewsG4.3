@@ -44,18 +44,12 @@ public class getAllBitcoinNewsTest {
         String b = "Bitcoin";
         List<Article> filtered = AppController.filterList(b, mock);
         List<Article> bitcoin = new ArrayList<>();
-        bitcoin.add(one);
-        bitcoin.add(two);
         bitcoin.add(three);
         bitcoin.add(four);
         bitcoin.add(five);
         bitcoin.add(six);
         bitcoin.add(seven);
-        bitcoin.add(eight);
-        bitcoin.add(nine);
         bitcoin.add(ten);
-        bitcoin.add(eleven);
-        bitcoin.add(twelve);
 
         assertEquals(filtered, bitcoin);
 
