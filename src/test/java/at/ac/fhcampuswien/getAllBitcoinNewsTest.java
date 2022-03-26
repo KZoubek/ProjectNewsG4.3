@@ -1,4 +1,4 @@
-package at.ac.fhcampuswien.appcontroller;
+package at.ac.fhcampuswien;
 
 import at.ac.fhcampuswien.App;
 import at.ac.fhcampuswien.AppController;
@@ -42,7 +42,7 @@ public class getAllBitcoinNewsTest {
         mock.add(twelve);
 
         String b = "Bitcoin";
-        List<Article> filtered = AppController.filterList(b, mock) ;
+        List<Article> filtered = AppController.filterList(b, mock);
         List<Article> bitcoin = new ArrayList<>();
         bitcoin.add(one);
         bitcoin.add(two);
@@ -56,7 +56,6 @@ public class getAllBitcoinNewsTest {
         bitcoin.add(ten);
         bitcoin.add(eleven);
         bitcoin.add(twelve);
-
 
         assertEquals(filtered, bitcoin);
 
