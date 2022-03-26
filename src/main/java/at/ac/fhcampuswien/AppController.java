@@ -14,7 +14,7 @@ public class AppController {
     }
 
     public int getArticleCount() {
-        int count=0;
+        int count = 0;
         return count;
     }
     public List<Article> getArticles(){
@@ -36,8 +36,6 @@ public class AppController {
             if (articles.get(i).getTitle().toLowerCase().contains(query.toLowerCase())) {
                 queryList.add(articles.get(i));
             }
-            // String[] splitTitle = articleTitle.split(" ");?? splittet den Titel nach Wörtern auf
-            //muss aber in ein neues Array dann
         }
         return queryList;
     }

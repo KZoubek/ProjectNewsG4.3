@@ -19,7 +19,7 @@ public class Menu {
     private void handleInput(String input) {
         if (input.equals("a")) {
             System.out.println("Austria");
-            //getTopHeadlinesAustria();
+            //System.out.println(controller.getTopHeadlinesAustria());
         } else if (input.equals("b")) {
             System.out.println("Bitcoin");
             //getAllNewsBitcoin();
