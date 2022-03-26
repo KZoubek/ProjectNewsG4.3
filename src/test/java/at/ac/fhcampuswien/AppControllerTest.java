@@ -1,5 +1,7 @@
 package at.ac.fhcampuswien;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,7 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AppControllerTest {
 
+    @BeforeEach
+    private AppController ctrl = new AppController();
+
     @Test
+    @DisplayName("Test 1 for setArticle")
     public void setArticles1(){
 
         //Dummy list to have an expected
@@ -40,17 +46,18 @@ class AppControllerTest {
         mock2.add(twelve);
 
         //create new object from Appcontroller to call a specific method because it's not static
-        AppController articletest = new AppController();
-        articletest.setArticles(mock2);
+        //AppController ctrl = new AppController();
+        ctrl.setArticles(mock2);
 
         // check if articles have been set in new List
-        List<Article> gettedList = articletest.getArticles();
+        List<Article> gettedList = ctrl.getArticles();
 
         // compare if both match
         assertEquals(gettedList, mock2);
     }
 
     @Test
+    @DisplayName("Test 2 for setArticle")
     public void setArticles2() {
 
         //Dummy list to have an expected
@@ -63,29 +70,33 @@ class AppControllerTest {
         mock2.add(three);
 
         //create new object from Appcontroller to call a specific method because it's not static
-        AppController articletest2 = new AppController();
-        articletest2.setArticles(mock2);
+        //AppController articletest2 = new AppController();
+        ctrl.setArticles(mock2);
 
         // check if articles have been set in new List
-        List<Article> gettedList2 = articletest2.getArticles();
+        List<Article> gettedList2 = ctrl.getArticles();
 
         // compare if both match
         assertEquals(gettedList2, mock2);
     }
 
     @Test
+    @DisplayName("Test for getArticleCount")
     void getArticleCount() {
     }
 
     @Test
+    @DisplayName("Test for getTopHeadlinesAustria")
     void getTopHeadlinesAustria() {
     }
 
     @Test
+    @DisplayName("Test for getAllNewsBitcoin")
     void getAllNewsBitcoin() {
     }
 
-    @Test //test for "Austria"
+    @Test
+    @DisplayName("Test 1 for filterList with query Austria")
     public void filterListTest1() {
         List<Article> mock3 = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
@@ -130,7 +141,8 @@ class AppControllerTest {
         assertEquals(filterListT, austria);
     }
 
-    @Test //test for "Bitcoin"
+    @Test
+    @DisplayName("Test 2 for filterList with query Bitcoin")
     public void filterListTest2() {
         List<Article> mock3 = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
@@ -173,7 +185,8 @@ class AppControllerTest {
         assertEquals(filterListT, bitcoin);
     }
 
-    @Test //test for "mother"
+    @Test
+    @DisplayName("Test 3 for filterList with query Mother")
     public void filterListTest3() {
         List<Article> mock3 = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
@@ -215,7 +228,8 @@ class AppControllerTest {
         assertEquals(filterListT, mother);
     }
 
-    @Test //test for "the"
+    @Test
+    @DisplayName("Test 4 for filterList with query the")
     public void filterListTest4() {
         List<Article> mock3 = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
@@ -260,7 +274,8 @@ class AppControllerTest {
         assertEquals(filterListT, the1);
     }
 
-    @Test //test for "the" plus space
+    @Test
+    @DisplayName("Test 5 for filterList with query the with white space")
     public void filterListTest5() {
         List<Article> mock3 = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
