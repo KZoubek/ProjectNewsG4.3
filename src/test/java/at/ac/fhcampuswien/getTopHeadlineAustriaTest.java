@@ -11,6 +11,7 @@ public class getTopHeadlineAustriaTest {
     //test
     @Test
     public void getTopHeadlineAustriaTest1(){
+        //A list(ArrayList) called articels from the class Article is made
         List<Article> articles = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
         articles.add(one);
@@ -37,9 +38,13 @@ public class getTopHeadlineAustriaTest {
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         articles.add(twelve);
 
+        //An controller object called CTRL is made
         AppController CTRL = new AppController();
+        //With the setArticles method the articles from the List articles is taken
         CTRL.setArticles(articles);
+        // and set into the List actual
         List<Article> actual = CTRL.getTopHeadlinesAustria();
+        //This is the actual comparison
         assertEquals(articles,actual);
 
         /* failed test commit
