@@ -36,7 +36,13 @@ public class getTopHeadlineAustriaTest {
         articles.add(eleven);
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         articles.add(twelve);
-        // failed test commit
+
+        AppController CTRL = new AppController();
+        CTRL.setArticles(articles);
+        List<Article> actual = CTRL.getTopHeadlinesAustria();
+        assertEquals(articles,actual);
+
+        /* failed test commit
         List<Article> failedArticles = new ArrayList<>();
         Article new_one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
         failedArticles.add(one);
@@ -45,7 +51,7 @@ public class getTopHeadlineAustriaTest {
         CTRL.setArticles(failedArticles);
         List<Article> actual = CTRL.getTopHeadlinesAustria();
         assertEquals(failedArticles,articles);
-
+             */
 
     }
 
