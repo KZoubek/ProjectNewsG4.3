@@ -11,9 +11,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class getAllBitcoinNewsTest {
-    //test
 
     @Test
+    //In this section, a mock list of articles is created.
     public void getAllBitcoinNewsTest1() {
         List<Article> mock = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
@@ -41,8 +41,11 @@ public class getAllBitcoinNewsTest {
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock.add(twelve);
 
-        String b = "Bitcoin";
-        List<Article> filtered = AppController.filterList(b, mock);
+        //String query is created with the word that is being searched for. In this case "Bitcoin".
+        String query = "Bitcoin";
+        //The list is created so that the query can be used to filter the mock list from above.
+        List<Article> filtered = AppController.filterList(query, mock);
+        //The object bitcoin is created and is "filled" with the article from above.
         List<Article> bitcoin = new ArrayList<>();
         bitcoin.add(three);
         bitcoin.add(four);
@@ -51,14 +54,7 @@ public class getAllBitcoinNewsTest {
         bitcoin.add(seven);
         bitcoin.add(ten);
 
+        //Here the "filtered" list is compared with the object "bitcoin".
         assertEquals(filtered, bitcoin);
-
-        //String actual = "Bitcoin";
-        //assertEquals(actual.contains("Bitcoin"), five.getTitle().contains("Bitcoin"));
-
-        //if (two.equals(actual)){System.out.println("Bitcoin found!");}else {System.out.println("Not Bitcoin found!");}
-
-        //if (seven.getTitle().equals("Bitcoin")) {System.out.println(true);}
-
     }
 }

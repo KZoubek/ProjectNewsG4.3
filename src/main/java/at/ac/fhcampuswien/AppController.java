@@ -13,21 +13,31 @@ public class AppController {
         this.articles = articles;
     }
 
-    /*public int getArticleCount() {
+    public int getArticleCount() {
         return articles.size();
     }
 
     public List<Article> getTopHeadlinesAustria() {
-
+    return articles;
     }
 
     public List<Article> getAllNewsBitcoin() {
-
+    //Returns the "filterList" with the keyword "bitcoin" and the "articles". Compares if the keyword is inside the article.
+    return filterList("bitcoin", articles);
     }
 
-    protected List<Article> filterList(String query, List<Article> articles) {
+    protected static List<Article> filterList(String query, List<Article> articles) {
+        List<Article> queryList = new ArrayList<>();
 
-    }*/
+        for (int i = 0; i < articles.size(); i++) {
+            if (articles.get(i).getTitle().toLowerCase().contains(query.toLowerCase())) {
+                queryList.add(articles.get(i));
+            }
+            // String[] splitTitle = articleTitle.split(" ");?? splittet den Titel nach Wörtern auf
+            //muss aber in ein neues Array dann
+        }
+        return  queryList;
+    }
 
     private static List<Article> generateMockList() {
         List<Article> mock = new ArrayList<>();
