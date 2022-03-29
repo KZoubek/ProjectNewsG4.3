@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
-    private List<Article> articles = generateMockList();
+    private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
     }
@@ -14,19 +14,30 @@ public class AppController {
     }
 
     public int getArticleCount() {
-        return articles.size();
+        int count = 0;
+        return count;
+    }
+    public List<Article> getArticles(){
+        return articles;
     }
 
     public List<Article> getTopHeadlinesAustria() {
-
+        return articles;
     }
 
     public List<Article> getAllNewsBitcoin() {
-
+        return articles;
     }
 
-    protected List<Article> filterList(String query, List<Article> articles) {
+    protected static List<Article> filterList(String query, List<Article> articles) {
+        List<Article> queryList = new ArrayList<>();
 
+        for (int i = 0; i < articles.size(); i++) {
+            if (articles.get(i).getTitle().toLowerCase().contains(query.toLowerCase())) {
+                queryList.add(articles.get(i));
+            }
+        }
+        return queryList;
     }
 
     private static List<Article> generateMockList() {
@@ -35,13 +46,13 @@ public class AppController {
         mock.add(one);
         Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
         mock.add(two);
-        Article three= new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
+        Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         mock.add(three);
-        Article four= new Article("Dr.Acula", "Viertes Buch");
+        Article four= new Article("Dr.Acula", "Austria is too small for me");
         mock.add(four);
-        Article five= new Article("five", "Fünftes Buch");
+        Article five= new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
         mock.add(five);
-        Article six= new Article("six", "Sechstes Buch");
+        Article six= new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
         mock.add(six);
         Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
         mock.add(seven);
@@ -49,15 +60,12 @@ public class AppController {
         mock.add(eight);
         Article nine = new Article("Raze Rammayer", "Krise: Schokoladen-Verbot in der EU");
         mock.add(nine);
-        //mody 10-12
-        Article ten = new Article("New York Times", "Eric Adams, a Bitcoinin Booster, Is Talking First Paycheck InCrypto");
+        Article ten = new Article("New York Times", "Eric Adams, a Bitcoin in Booster, Is Talking First Paycheck InCrypto");
         mock.add(ten);
         Article eleven = new Article("News Sky", "Irishman held against his will in China for 3 years reunited with 'unbelievably happy' family");
         mock.add(eleven);
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock.add(twelve);
         return mock;
-
     }
-
 }
