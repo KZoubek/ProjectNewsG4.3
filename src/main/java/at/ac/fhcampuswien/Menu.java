@@ -24,8 +24,7 @@ public class Menu {
             System.out.println("Bitcoin");
             //getAllNewsBitcoin();
         } else if (input.equals("y")) {
-            System.out.println("Count");
-            //getArticleCount();
+            printArticleCount();
         } else if (input.equals("q")) {
             printExitMessage();
         } else {
@@ -33,8 +32,12 @@ public class Menu {
         }
     }
 
-    private void getArticleCount(AppController controller) {
-
+    private void printArticleCount() {
+        int count = 0;
+        if (controller != null) {
+            count = controller.getArticleCount();
+        }
+        System.out.println("Number of articles: " + count);
     }
 
     private void getTopHeadlinesAustria(AppController controller) {
