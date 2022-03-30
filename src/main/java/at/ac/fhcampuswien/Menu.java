@@ -40,8 +40,8 @@ public class Menu {
         System.out.println("Number of articles: " + count);
     }
 
-    private void getTopHeadlinesAustria(AppController controller) {
-
+    public void getTopHeadlinesAustria(AppController controller) {
+        System.out.println(controller.getTopHeadlinesAustria().toString());
     }
 
     private void getAllNewsBitcoin(AppController controller) {
