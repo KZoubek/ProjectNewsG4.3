@@ -22,5 +22,4 @@ public class getArticleCountTest {
         assertEquals(expected, actual);
 
     }
-
 }

@@ -45,6 +45,8 @@ public class Menu {
     }
 
     private void getAllNewsBitcoin(AppController controller) {
+        //The "getAllNewsBitcoin" Method will be printed out with this line.
+        System.out.println(controller.getAllNewsBitcoin());
     }
 
     private static void printExitMessage() {
@@ -65,4 +67,5 @@ public class Menu {
         System.out.println("y: Count articles");
         System.out.println("q: Quit program");
     }
+
 }
