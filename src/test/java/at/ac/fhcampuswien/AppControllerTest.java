@@ -1,18 +1,14 @@
 package at.ac.fhcampuswien;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppControllerTest {
-
-    @BeforeEach
-    private AppController ctrl = new AppController();
 
     @Test
     @DisplayName("Test 1 for setArticle")
@@ -46,11 +42,11 @@ class AppControllerTest {
         mock2.add(twelve);
 
         //create new object from Appcontroller to call a specific method because it's not static
-        //AppController ctrl = new AppController();
-        ctrl.setArticles(mock2);
+        AppController articletest = new AppController();
+        articletest.setArticles(mock2);
 
         // check if articles have been set in new List
-        List<Article> gettedList = ctrl.getArticles();
+        List<Article> gettedList = articletest.getArticles();
 
         // compare if both match
         assertEquals(gettedList, mock2);
@@ -70,11 +66,11 @@ class AppControllerTest {
         mock2.add(three);
 
         //create new object from Appcontroller to call a specific method because it's not static
-        //AppController articletest2 = new AppController();
-        ctrl.setArticles(mock2);
+        AppController articletest2 = new AppController();
+        articletest2.setArticles(mock2);
 
         // check if articles have been set in new List
-        List<Article> gettedList2 = ctrl.getArticles();
+        List<Article> gettedList2 = articletest2.getArticles();
 
         // compare if both match
         assertEquals(gettedList2, mock2);

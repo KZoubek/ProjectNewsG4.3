@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
-    private List<Article> articles= generateMockList(); // for us to test
+    private List<Article> articles = generateMockList(); // for us to test
 
     public AppController() {
     }
@@ -19,7 +19,8 @@ public class AppController {
         }
         return articles.size();
     }
-    public List<Article> getArticles(){
+
+    public List<Article> getArticles() {
         return articles;
     }
 
@@ -32,8 +33,8 @@ public class AppController {
     }
 
     public List<Article> getAllNewsBitcoin() {
-    //Returns the "filterList" with the keyword "bitcoin" and the "articles". Compares if the keyword is inside the article.
-    return filterList("bitcoin", articles);
+        //Returns the "filterList" with the keyword "bitcoin" and the "articles". Compares if the keyword is inside the article.
+        return filterList("bitcoin", articles);
     }
 
     protected static List<Article> filterList(String query, List<Article> articles) {
@@ -55,11 +56,11 @@ public class AppController {
         mock.add(two);
         Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         mock.add(three);
-        Article four= new Article("Dr.Acula", "Austria is too small for me");
+        Article four = new Article("Dr.Acula", "Austria is too small for me");
         mock.add(four);
-        Article five= new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
+        Article five = new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
         mock.add(five);
-        Article six= new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
+        Article six = new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
         mock.add(six);
         Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
         mock.add(seven);
@@ -74,7 +75,5 @@ public class AppController {
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock.add(twelve);
         return mock;
-
     }
-
 }

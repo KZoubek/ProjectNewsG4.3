@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class getTopHeadlineAustriaTest {
     //test
     @Test
-    public void getTopHeadlineAustriaTest1(){
+    public void getTopHeadlineAustriaTest1() {
         //A list(ArrayList) called articels from the class Article is made
         List<Article> articles = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
@@ -19,11 +19,11 @@ public class getTopHeadlineAustriaTest {
         articles.add(two);
         Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         articles.add(three);
-        Article four= new Article("Dr.Acula", "Austria is too small for me");
+        Article four = new Article("Dr.Acula", "Austria is too small for me");
         articles.add(four);
-        Article five= new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
+        Article five = new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
         articles.add(five);
-        Article six= new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
+        Article six = new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
         articles.add(six);
         Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
         articles.add(seven);
@@ -46,9 +46,7 @@ public class getTopHeadlineAustriaTest {
         // and set into the List actual
         List<Article> actual = CTRL.getTopHeadlinesAustria();
         //This is the actual comparison
-        assertEquals(articles,actual);
-
-
+        assertEquals(articles, actual);
 
 
         // Finished test when gettopheadlines ready
@@ -72,5 +70,5 @@ public class getTopHeadlineAustriaTest {
         List<Article> actual = CTRL.getTopHeadlinesAustria();
         assertEquals(failedArticles,articles);
         */
-
     }
+}

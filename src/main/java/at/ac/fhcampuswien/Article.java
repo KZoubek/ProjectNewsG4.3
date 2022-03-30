@@ -1,15 +1,13 @@
 package at.ac.fhcampuswien;
 
-import java.util.List;
-
-public class Article{
+public class Article {
 
     private String author;
     private String title;
 
-    public Article (String author,String title ){
-        this.author= author;
-        this.title= title;
+    public Article(String author, String title) {
+        this.author = author;
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -19,8 +17,9 @@ public class Article{
     public String getTitle() {
         return title;
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return "Author: " + getAuthor() + ", " + "Title: " + getTitle();
 
     }
