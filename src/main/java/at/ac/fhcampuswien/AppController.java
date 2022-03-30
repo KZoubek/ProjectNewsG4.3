@@ -22,9 +22,12 @@ public class AppController {
     }
 
     public List<Article> getTopHeadlinesAustria() {
-        return articles;
+        if (articles != null) {
+            return articles;
+        } else {
+            return new ArrayList<Article>();
+        }
     }
-
     public List<Article> getAllNewsBitcoin() {
         return articles;
     }
