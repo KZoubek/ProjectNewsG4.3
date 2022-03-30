@@ -30,8 +30,10 @@ public class AppController {
             return new ArrayList<Article>();
         }
     }
+
     public List<Article> getAllNewsBitcoin() {
-        return articles;
+    //Returns the "filterList" with the keyword "bitcoin" and the "articles". Compares if the keyword is inside the article.
+    return filterList("bitcoin", articles);
     }
 
     protected static List<Article> filterList(String query, List<Article> articles) {
@@ -72,5 +74,7 @@ public class AppController {
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
         mock.add(twelve);
         return mock;
+
     }
+
 }
