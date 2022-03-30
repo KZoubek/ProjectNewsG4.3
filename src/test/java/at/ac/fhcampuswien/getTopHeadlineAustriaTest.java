@@ -42,10 +42,25 @@ public class getTopHeadlineAustriaTest {
         AppController CTRL = new AppController();
         //With the setArticles method the articles from the List articles is taken
         CTRL.setArticles(articles);
+
         // and set into the List actual
         List<Article> actual = CTRL.getTopHeadlinesAustria();
         //This is the actual comparison
         assertEquals(articles,actual);
+
+
+
+
+        // Finished test when gettopheadlines ready
+        /*List<Article> expected = new ArrayList<>();
+        expected.add(one);
+        expected.add(four);
+        expected.add(six);
+        expected.add(eight);*/
+        //assertEquals(expected, actual);
+
+
+
 
         /* failed test commit
         List<Article> failedArticles = new ArrayList<>();
@@ -56,7 +71,7 @@ public class getTopHeadlineAustriaTest {
         CTRL.setArticles(failedArticles);
         List<Article> actual = CTRL.getTopHeadlinesAustria();
         assertEquals(failedArticles,articles);
-             */
+        */
 
     }
 
