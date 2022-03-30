@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppController {
-    private List<Article> articles = generateMockList(); // for us to test
+    private List<Article> articles= generateMockList(); // for us to test
 
     public AppController() {
     }
@@ -14,8 +14,10 @@ public class AppController {
     }
 
     public int getArticleCount() {
-        int count = 0;
-        return count;
+        if (articles == null) {
+            return 0;
+        }
+        return articles.size();
     }
     public List<Article> getArticles(){
         return articles;
