@@ -1,5 +1,5 @@
-import at.ac.fhcampuswien.AppController;
-import at.ac.fhcampuswien.Article;
+package at.ac.fhcampuswien;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
