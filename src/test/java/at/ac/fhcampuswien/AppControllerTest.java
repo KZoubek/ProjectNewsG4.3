@@ -1,7 +1,6 @@
 package at.ac.fhcampuswien;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,50 +9,68 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppControllerTest {
 
+    List<Article> mock = null;
+
+    @BeforeAll
+    public static void init() {
+        System.out.println("Starting Testing");
+    }
+
+    @AfterAll
+    public static void finish() {
+        System.out.println("Finished Testing");
+    }
+
+    @BeforeEach
+    public void setUp(){
+        mock = new ArrayList<>();
+
+        List<Article> mock = new ArrayList<>();
+        Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
+        mock.add(one);
+        Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
+        mock.add(two);
+        Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
+        mock.add(three);
+        Article four = new Article("Dr.Acula", "Austria is too small for me");
+        mock.add(four);
+        Article five = new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
+        mock.add(five);
+        Article six = new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
+        mock.add(six);
+        Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
+        mock.add(seven);
+        Article eight = new Article("Sage Smith", "Austria: Das A steht für Alpen");
+        mock.add(eight);
+        Article nine = new Article("Raze Rammayer", "Krise: Schokoladen-Verbot in der EU");
+        mock.add(nine);
+        Article ten = new Article("New York Times", "Eric Adams, a Bitcoin in Booster, Is Talking First Paycheck InCrypto");
+        mock.add(ten);
+        Article eleven = new Article("News Sky", "Irishman held against his will in China for 3 years reunited with 'unbelievably happy' family");
+        mock.add(eleven);
+        Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
+        mock.add(twelve);
+    }
+    
     @Test
-    @DisplayName("Test 1 for setArticle")
+    @DisplayName("Test 1 for setArticle with long list")
     public void setArticles1() {
 
-        //Dummy list to have an expected
-        List<Article> mock2 = new ArrayList<>();
-        Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
-        mock2.add(one);
-        Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
-        mock2.add(two);
-        Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
-        mock2.add(three);
-        Article four = new Article("Dr.Acula", "Austria is too small for me");
-        mock2.add(four);
-        Article five = new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
-        mock2.add(five);
-        Article six = new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
-        mock2.add(six);
-        Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
-        mock2.add(seven);
-        Article eight = new Article("Sage Smith", "Austria: Das A steht für Alpen");
-        mock2.add(eight);
-        Article nine = new Article("Raze Rammayer", "Krise: Schokoladen-Verbot in der EU");
-        mock2.add(nine);
-        Article ten = new Article("New York Times", "Eric Adams, a Bitcoin in Booster, Is Talking First Paycheck InCrypto");
-        mock2.add(ten);
-        Article eleven = new Article("News Sky", "Irishman held against his will in China for 3 years reunited with 'unbelievably happy' family");
-        mock2.add(eleven);
-        Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
-        mock2.add(twelve);
+        //Dummy list to have an expected from setup
 
         //create new object from Appcontroller to call a specific method because it's not static
         AppController articletest = new AppController();
-        articletest.setArticles(mock2);
+        articletest.setArticles(mock);
 
         // check if articles have been set in new List
         List<Article> gettedList = articletest.getArticles();
 
         // compare if both match
-        assertEquals(gettedList, mock2);
+        assertEquals(gettedList, mock);
     }
 
     @Test
-    @DisplayName("Test 2 for setArticle")
+    @DisplayName("Test 2 for setArticle with long list")
     public void setArticles2() {
 
         //Dummy list to have an expected
@@ -82,7 +99,7 @@ class AppControllerTest {
         //create an object of AppController
         AppController myAppController = new AppController();
 
-        // expected value is 12 because we have created 12 object in mocklist
+        /* expected value is 12 because we have created 12 object in mocklist */
         int expected = 12;
 
         // get the actual value from method "getArticleCount"
@@ -95,42 +112,17 @@ class AppControllerTest {
     @Test
     @DisplayName("Test for getTopHeadlinesAustria")
     public void getTopHeadlineAustriaTest() {
-        //A list(ArrayList) called articels from the class Article is made
-        List<Article> articles = new ArrayList<>();
-        Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
-        articles.add(one);
-        Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
-        articles.add(two);
-        Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
-        articles.add(three);
-        Article four = new Article("Dr.Acula", "Austria is too small for me");
-        articles.add(four);
-        Article five = new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
-        articles.add(five);
-        Article six = new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
-        articles.add(six);
-        Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
-        articles.add(seven);
-        Article eight = new Article("Sage Smith", "Austria: Das A steht für Alpen");
-        articles.add(eight);
-        Article nine = new Article("Raze Rammayer", "Krise: Schokoladen-Verbot in der EU");
-        articles.add(nine);
-        Article ten = new Article("New York Times", "Eric Adams, a Bitcoin in Booster, Is Talking First Paycheck InCrypto");
-        articles.add(ten);
-        Article eleven = new Article("News Sky", "Irishman held against his will in China for 3 years reunited with 'unbelievably happy' family");
-        articles.add(eleven);
-        Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
-        articles.add(twelve);
+        //dummy list from above with setup
 
         //An controller object called CTRL is made
         AppController CTRL = new AppController();
         //With the setArticles method the articles from the List articles is taken
-        CTRL.setArticles(articles);
+        CTRL.setArticles(mock);
 
         // and set into the List actual
         List<Article> actual = CTRL.getTopHeadlinesAustria();
         //This is the actual comparison
-        assertEquals(articles, actual);
+        assertEquals(mock, actual);
 
         // Finished test when gettopheadlines ready
         /*List<Article> expected = new ArrayList<>();
@@ -156,37 +148,38 @@ class AppControllerTest {
     @DisplayName("Test for getAllNewsBitcoin")
     void getAllNewsBitcoin() {
         //In this section, a mock list of articles is created.
-        List<Article> mock = new ArrayList<>();
+        List<Article> mock2 = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
-        mock.add(one);
+        mock2.add(one);
         Article two = new Article("Simon Neuch", "Angermanagement and Mandalas");
-        mock.add(two);
+        mock2.add(two);
         Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
-        mock.add(three);
+        mock2.add(three);
         Article four = new Article("Dr.Acula", "How to: Bitcoin in echtes Geld umwandeln");
-        mock.add(four);
+        mock2.add(four);
         Article five = new Article("five", "How to: Bitcoin in echtes Geld umwandeln");
-        mock.add(five);
+        mock2.add(five);
         Article six = new Article("six", "How to: Bitcoin in echtes Geld umwandeln");
-        mock.add(six);
+        mock2.add(six);
         Article seven = new Article("Sova Nova", "Bitcoin soll in Zukunft gedruckt werden");
-        mock.add(seven);
+        mock2.add(seven);
         Article eight = new Article("Sage Smith", "Austria: Das A steht für Alpen");
-        mock.add(eight);
+        mock2.add(eight);
         Article nine = new Article("Raze Rammayer", "Krise: Schokoladen-Verbot in der EU");
-        mock.add(nine);
+        mock2.add(nine);
         Article ten = new Article("New York Times", "Eric Adams, a Bitcoin in Booster, Is Talking First Paycheck InCrypto");
-        mock.add(ten);
+        mock2.add(ten);
         Article eleven = new Article("News Sky", "Irishman held against his will in China for 3 years reunited with 'unbelievably happy' family");
-        mock.add(eleven);
+        mock2.add(eleven);
         Article twelve = new Article("News Sky", "Mother who won 127,000 tells how she still ended up homeless");
-        mock.add(twelve);
+        mock2.add(twelve);
 
         //String query is created with the word that is being searched for. In this case "Bitcoin".
         String query = "Bitcoin";
-        //The list is created so that the query can be used to filter the mock list from above.
-        List<Article> filtered = AppController.filterList(query, mock);
-        //The object bitcoin is created and is "filled" with the article from above.
+        //The list is created so that the query can call the method filterlist.
+        List<Article> filtered = AppController.filterList(query, mock2);
+
+        //The list bitcoin is created and is "filled" with the article from mock.
         List<Article> bitcoin = new ArrayList<>();
         bitcoin.add(three);
         bitcoin.add(four);
@@ -202,6 +195,7 @@ class AppControllerTest {
     @Test
     @DisplayName("Test 1 for filterList with query Austria")
     public void filterListTest1() {
+
         List<Article> mock3 = new ArrayList<>();
         Article one = new Article("Margarete Schramboeck", "SWIFT geht in Austria auch mit Erlagschein");
         mock3.add(one);
