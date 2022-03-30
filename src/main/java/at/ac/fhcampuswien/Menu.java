@@ -18,11 +18,11 @@ public class Menu {
 
     private void handleInput(String input) {
         if (input.equals("a")) {
-            System.out.println("Austria");
-            //System.out.println(controller.getTopHeadlinesAustria());
+            //System.out.println("Austria");
+            getTopHeadlinesAustria(controller);
         } else if (input.equals("b")) {
-            System.out.println("Bitcoin");
-            //getAllNewsBitcoin();
+            //System.out.println("Bitcoin");
+            getAllNewsBitcoin(controller);
         } else if (input.equals("y")) {
             printArticleCount();
         } else if (input.equals("q")) {
@@ -46,7 +46,7 @@ public class Menu {
 
     private void getAllNewsBitcoin(AppController controller) {
         //The "getAllNewsBitcoin" Method will be printed out with this line.
-        System.out.println(controller.getAllNewsBitcoin());
+        System.out.println(controller.getAllNewsBitcoin().toString());
     }
 
     private static void printExitMessage() {
