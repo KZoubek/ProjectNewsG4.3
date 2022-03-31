@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+class AppControllerTest {
+
+    @Test
+    public void setArticles1(){
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AppControllerTest {
@@ -39,7 +45,7 @@ class AppControllerTest {
         mock.add(twelve);
         return mock;
     }*/
-    
+
     @Test
     @DisplayName("Test 1 for setArticle with long list")
     public void setArticles1() {
@@ -52,9 +58,9 @@ class AppControllerTest {
         mock2.add(two);
         Article three = new Article("Bloomberg", "How to: Bitcoin in echtes Geld umwandeln");
         mock2.add(three);
-        Article four = new Article("Dr.Acula", "Austria is too small for me");
+        Article four= new Article("Dr.Acula", "Austria is too small for me");
         mock2.add(four);
-        Article five = new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
+        Article five= new Article("Hugh Jass", "Vienna Is On OnlyFans: Our Cultural Capital Gets Naked");
         mock2.add(five);
         Article six = new Article("Yuri Nator", "Erdäpfel, Topfen & Paradeiser are more than just words in Austria.");
         mock2.add(six);

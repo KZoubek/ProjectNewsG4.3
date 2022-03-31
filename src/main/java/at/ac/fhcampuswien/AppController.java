@@ -9,7 +9,7 @@ public class AppController {
     public AppController() {
     }
 
-    public void setArticles(List<Article> articles) {
+    public void setArticles() {
         this.articles = articles;
     }
 
@@ -76,4 +76,5 @@ public class AppController {
         mock.add(twelve);
         return mock;
     }
+
 }

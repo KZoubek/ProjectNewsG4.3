@@ -9,12 +9,7 @@ public class Menu {
 
     public void start() {
         Scanner userinput = new Scanner(System.in);
-
-        printMenu();
-
         String input = userinput.next();
-        handleInput(input);
-    }
 
     private void handleInput(String input) {
         if (input.equals("a")) {
@@ -67,5 +62,4 @@ public class Menu {
         System.out.println("y: Count articles");
         System.out.println("q: Quit program");
     }
-
 }
